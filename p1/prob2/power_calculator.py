@@ -1,9 +1,11 @@
-def pow(n, p):
-    if p == 0:
-        return 1
+def power(n, p):
     if p < 0:
-        return pow(1/n, -p)
-    return pow(n, p-1) * n
+        return power(1/n, -p)
+    num = 1
+    while p > 0:
+        num = num * n
+        p = p - 1
+    return num
 
 def handle_input(name, convert):
     try:
@@ -15,7 +17,7 @@ def handle_input(name, convert):
 def main():
     n = handle_input("number", float)
     p = handle_input("exponent", int)
-    result = pow(n, p)
+    result = power(n, p)
     print(f"Result: {result}")
 
 if __name__ == "__main__":
