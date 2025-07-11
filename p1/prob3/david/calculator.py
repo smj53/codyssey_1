@@ -39,7 +39,7 @@ def getBonusInput():
     
 def selectType(ans):
     if ans == "1":
-            a, b, op = getInput()
+        a, b, op = getInput()
     elif ans == "2":
         a, b, op = getBonusInput()
     elif ans == "3":
@@ -51,9 +51,13 @@ def selectType(ans):
 
 if __name__ == "__main__":
     while True:
-        ans = input("select type of input (1 - default, 2 - bonus, 3 - exit): ")
         try:
+            ans = input("select type of input (1 - default, 2 - bonus, 3 - exit): ")
             selectType(ans)
+        except EOFError:
+            exit(0)
+        except KeyboardInterrupt:
+            exit(0)
         except Exception as e:
             print(e)
         
