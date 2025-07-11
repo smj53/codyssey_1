@@ -22,7 +22,8 @@ def validateInput(a, b, op):
         raise Exception("Invalid Input: Not a float")
     if op not in ops.keys():
         raise Exception("Invalid operator.")
-    return (numA, numB, op)
+    # "입력받은 숫자는 반드시 정수형 변환합니다."
+    return (int(numA), int(numB), op)
 
 def getInput():
     arr = input("input a b: ").split()
