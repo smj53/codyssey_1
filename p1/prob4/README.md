@@ -1,0 +1,14 @@
+## git 설정법
+- git 전역 설정
+    - 개행문자 설정
+        - `git config --global core.autocrlf input`
+    - 사용자 이름, 이메일주소
+        - `git config --global user.name <name>`
+        - `git config --global user.email <email>`
+    - 기본 브랜치 이름 main
+        - git branch -M main
+    - 조회: `git config --global --list`
+    - 전역설정 파일: `~/.gitconfig`
+    - 기본 에디터 변경: `git config --global core.editor <editor>`
+        - vscode: `"code --wait"`
+        - flatpak 사용 vscode: `"flatpak run com.visualstudio.code --wait"`
